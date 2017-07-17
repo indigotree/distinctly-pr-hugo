@@ -6,8 +6,3 @@ theme = "distinctlypr-v1"
 [params]
     copyright1 = "&copy; Copyright [year] Distinctly Digital Limited. Registered Company No. 06905971"
     copyright2 = "Registered Address: Little Sharlowes, Flaunden, Hertfordshire, HP3 0PP."
-
-[[menu.main]]
-    name = 'Home'
-    url = "/"
-    weight = -100
