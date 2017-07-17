@@ -1,16 +1,8 @@
 <footer class="site-footer" role="contentinfo">
 
     <div class="site-footer__bottom">
-        <p class="site-footer__copyright">
-            {{ if .Site.Copyright }}
-                {{ .Site.Copyright | safeHTML }}
-            {{ else }}
-                &copy; {{ .Site.LastChange.Format "2006" }} &middot; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            {{ end }}
-        </p>
-        <p class="site-footer__credit">
-            Site by <a href="https://indigotree.co.uk" rel="noopener">Indigo Tree</a>
-        </p>
+        <p>{{ (replace .Site.Params.copyright1 "[year]" (now.Format "2006")) | safeHTML }}</p>
+        <p>{{ .Site.Params.copyright2 | safeHTML }}</p>
     </div>
 
 </footer>
