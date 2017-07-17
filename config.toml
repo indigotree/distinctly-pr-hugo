@@ -1,0 +1,9 @@
+baseURL = "https://distinctlypr.co"
+languageCode = "en-GB"
+title = "Distinctly PR"
+theme = "distinctlypr-v1"
+
+[[menu.main]]
+    name = 'Home'
+    url = "/"
+    weight = -100

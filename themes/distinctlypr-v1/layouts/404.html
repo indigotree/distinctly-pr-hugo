@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+    <div class="site-content">
+
+        <h1>{{ .Site.Params.pageNotFound.Title | default "Page Not Found!" }}</h1>
+        <p>{{ .Site.Params.pageNotFound.Description | default "The page you requested could not be found." }}</p>
+
+    </div>
+
+{{ end }}

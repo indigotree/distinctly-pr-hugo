@@ -1,0 +1,7 @@
+<header class="site-header" role="banner">
+
+    <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
+
+    {{ block "header" . }}{{ partial "site/menu.html" . }}{{ end }}
+    
+</header>
