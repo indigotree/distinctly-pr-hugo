@@ -1,8 +1,8 @@
 [build]
-    command = "hugo"
+    command = "npm run production && hugo"
     publish = "public"
 
 [context.production]
-    command = "hugo"
     [context.production.environment]
         HUGO_ENV = "production"
+        NODE_ENV = "production"
