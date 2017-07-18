@@ -1,8 +1,21 @@
 <footer class="site-footer" role="contentinfo">
-
     <div class="site-footer__bottom">
-        <p>{{ (replace .Site.Params.copyright1 "[year]" (now.Format "2006")) | safeHTML }}</p>
-        <p>{{ .Site.Params.copyright2 | safeHTML }}</p>
+        <div class="container">
+            <div class="row">
+                <div class="column column--sm-6">
+                    <img
+                        src="dist/site-brand-invert.png"
+                        srcset="dist/site-brand-invert.png 188w, dist/site-brand-invert-2x.png 376w"
+                        alt="{{ .Site.Title }}"
+                        width="188"
+                        height="33"
+                    >
+                </div>
+                <div class="column column--sm-6" style="text-align: right;">
+                    <p>{{ (replace .Site.Params.copyright1 "[year]" (now.Format "2006")) | safeHTML }}</p>
+                    <p>{{ .Site.Params.copyright2 | safeHTML }}</p>
+                </div>
+            </div>
+        </div>
     </div>
-
 </footer>

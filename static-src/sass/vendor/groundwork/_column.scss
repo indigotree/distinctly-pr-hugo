@@ -1,0 +1,30 @@
+.#{$groundwork-class-column} {
+    @include groundwork-column-core();
+}
+
+@each $size, $breakpoint in $groundwork-breakpoints {
+    @media (min-width: $breakpoint) {
+        
+        @include groundwork-column-class-builder($size) {
+            float: left;
+        }
+
+        .#{$groundwork-class-column}--#{$size}-right {
+            float: right !important;
+        }
+
+        @for $i from 1 through $groundwork-columns {
+            @if contains($groundwork-offsets, $size) {
+                .#{$groundwork-class-column}--#{$size}-offset-#{$i} {
+                    @include groundwork-offset($i);
+                }
+            }
+        }
+
+        @for $i from 1 through $groundwork-columns {
+            .#{$groundwork-class-column}--#{$size}-#{$i} {
+                @include groundwork-column($i);
+            }
+        }
+    }
+}

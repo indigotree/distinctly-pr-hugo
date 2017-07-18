@@ -1,0 +1,11 @@
+.section {
+    padding: 50px 0;
+
+    &--grey {
+        background-color: #e2e2e2;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}
