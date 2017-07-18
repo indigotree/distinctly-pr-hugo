@@ -1,9 +1,8 @@
 .banner {
     position: relative;
-    font-weight: bold;
     
     &__overlay {
-        font-size: 32px;
+        font-size: 14px;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -16,6 +15,8 @@
         flex-direction: column;
         text-shadow: 1px 1px 20px rgba(#000000, .4);
         letter-spacing: 1px;
+        padding: 15px;
+        text-align: center;
     }
 
     &__heading, &__description {
@@ -26,15 +27,39 @@
     &__heading {
         color: inherit;
         font-size: 175%;
-        padding: 15px 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     &__description {
+        margin-bottom: 0;
+    }
+
+    &__description, &__heading {
         padding: 10px 15px;
     }
 
     &__image {
         width: 100%;
     }
+
+    @media screen and (min-width: 600px) {
+        &__overlay {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__overlay {
+            font-size: 32px;
+        }
+        &__heading {
+            padding: 15px 20px;
+            margin-bottom: 20px;
+        }
+        &__description {
+            padding: 10px 15px;
+        }
+    }
+    
 }

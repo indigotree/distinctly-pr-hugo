@@ -30,4 +30,16 @@
             margin-left: 25px;
         }
     }
+
+    @media screen and (max-width: 720px) {
+        &__brand {
+            margin-bottom: -10px;
+            margin-top: 0px;
+            width: 220px;
+        }
+        &__contact > .contact-item {
+            margin-left: 10px;
+        }
+    }
+
 }

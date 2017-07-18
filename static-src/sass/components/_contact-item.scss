@@ -21,4 +21,13 @@
         font-size: 13px;
         color: rgba(#000000, .5);
     }
+
+    @media screen and (max-width: 720px) {
+        &__icon {
+            margin-right: 0;
+        }
+        &__content {
+            display: none;
+        }
+    }
 }
