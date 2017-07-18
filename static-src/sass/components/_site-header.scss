@@ -1,0 +1,33 @@
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(#000000, .5);
+    padding: 25px 0;
+    position: relative;
+    z-index: 20;
+    border-top: 4px solid $brand-2;
+
+    &__top {
+        display: flex;
+    }
+
+    &__brand, &__contact {
+        display: inline-block;
+    }
+
+    &__brand {
+        width: 250px;
+        margin-bottom: -8px;
+        margin-top: -2px;
+        & > img {
+            display: block;
+        }
+    }
+
+    &__contact {
+        margin-left: auto;
+        display: flex;
+        & > .contact-item {
+            margin-left: 25px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.site-footer {
+    background-color: $footer-background;
+    color: $footer-color;
+    padding: 30px 0;
+
+    &__bottom {
+        font-size: 70%;
+        p {
+            margin-bottom: 3px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

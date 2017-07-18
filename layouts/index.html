@@ -1,9 +1,49 @@
 {{ define "main" }}
-
-    <div class="site-content">
-
-        {{ .Content }}
-
+    
+    <div class="banner">
+        <div class="banner__overlay">
+            <h2 class="banner__heading">This is Hero Text #1</h2>
+            <p class="banner__description">And this is something to accompany the Hero Text #1 text</p>
+        </div>
+        <img src="uploads/banner.jpg" alt="Banner" class="banner__image">
     </div>
+
+    <article class="section">
+
+        <div class="container">
+            {{ .Content }}
+        </div>
+
+    </article>
+
+    <section class="section section--grey">
+        <div class="container">
+            
+            <form>
+                <div class="form__group">
+                    <label class="form__label">Name *</label>
+                    <input type="text" class="form__input form__input--text" name="name" placeholder="What is your name?" required="required">
+                </div>
+                <div class="form__group">
+                    <label class="form__label">E-Mail Address *</label>
+                    <input type="email" class="form__input form__input--email" name="email" placeholder="What is your e-mail address?" required="required">
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Telephone</label>
+                    <input type="tel" class="form__input form__input--tel" name="tel" placeholder="What is your phone number?" required="required">
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Comment</label>
+                    <textarea class="form__input form__input--textarea" name="comment"></textarea>
+                </div>
+                <div class="form__group">
+                    <button type="submit" class="button button--primary">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </section>
 
 {{ end }}

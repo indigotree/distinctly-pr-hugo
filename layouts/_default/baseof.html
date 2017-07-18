@@ -20,19 +20,15 @@
     </head>
     <body>
 
-        <div class="container">
+        {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-            {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+        <main class="site-main" role="main">
 
-            <main class="site-main" role="main">
+            {{ block "main" . }}{{ end }}
 
-                {{ block "main" . }}{{ end }}
+        </main>
 
-            </main>
-
-            {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
-
-        </div>
+        {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 
         {{ block "site/scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
 

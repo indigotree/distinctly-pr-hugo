@@ -1,0 +1,24 @@
+.contact-item {
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    color: #000000;
+
+    &__icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        svg {
+            fill: $brand-2;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__label {
+        font-size: 13px;
+        color: rgba(#000000, .5);
+    }
+}

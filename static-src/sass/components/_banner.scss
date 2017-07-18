@@ -1,0 +1,40 @@
+.banner {
+    position: relative;
+    font-weight: bold;
+    
+    &__overlay {
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        flex-direction: column;
+        text-shadow: 1px 1px 20px rgba(#000000, .4);
+        letter-spacing: 1px;
+    }
+
+    &__heading, &__description {
+        background-color: rgba(#000000, .75);
+        box-shadow: 0 5px 5px rgba(#000000, .3);
+    }
+
+    &__heading {
+        color: inherit;
+        font-size: 175%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        padding: 10px 15px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,7 @@
+.#{$groundwork-class-container} {
+    @include groundwork-container();
+}
+
+.#{$groundwork-class-container}:not(.container--fluid) {
+    @include groundwork-container-breakpoints();
+}
