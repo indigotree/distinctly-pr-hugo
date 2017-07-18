@@ -43,7 +43,7 @@ gulp.task('sass', () => {
     ])
     .pipe($.sass({ precision: 5 }))
     .pipe($.autoprefixer(['ie >= 11', 'last 2 versions']))
-    .pipe($.if(isProduction, $.cssnano()))
+    .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
     .pipe($.hash())
     .pipe(gulp.dest('static/dist'))
     .pipe($.hash.manifest('manifest.json', true))
