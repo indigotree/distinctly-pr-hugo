@@ -5,7 +5,9 @@
         background-color: #e2e2e2;
     }
 
-    p:last-of-type {
-        margin-bottom: 0;
+    & > *:last-child {
+        &, & > *:last-child {
+            margin-bottom: 0;
+        }
     }
 }

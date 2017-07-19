@@ -1,0 +1,20 @@
+{{ if .IsNamedParams }}
+
+    {{- $.Scratch.Set "attrs" (slice (printf "href=%q" (.Get "href"))) -}}
+
+    {{- $.Scratch.Set "classes" (slice "button") -}}
+    {{- $.Scratch.Add "classes" (slice (printf "button--%s" (.Get "type" | default "default"))) -}}
+
+    {{- $.Scratch.Add "attrs" (slice (printf "class=%q" (delimit ($.Scratch.Get "classes") " "))) -}}
+
+    {{- with .Get "target" -}}
+        {{- $.Scratch.Add "attrs" (slice (printf "target=%q" .)) -}}
+        {{- if eq . "_blank" -}}
+            {{- $.Scratch.Add "attrs" (slice "rel=\"noopener\"") -}}
+        {{- end -}}
+    {{- end -}}
+
+    <a {{ (delimit ($.Scratch.Get "attrs") " " | safeHTMLAttr) }}>{{ .Inner }}</a>
+{{ else }}
+    <a href="{{ .Get 0 }}" class="button button--primary">{{ .Inner }}</a>
+{{ end }}
