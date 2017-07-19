@@ -4,6 +4,21 @@
     &--grey {
         background-color: #e2e2e2;
     }
+    &--white {
+        background-color: #f6f6f6;
+    }
+
+    &__heading, &__description {
+        text-align: center;
+    }
+
+    &__heading {
+        margin-bottom: 0;
+        color: rgba(#000000, .7)
+    }
+    &__description {
+        color: rgba(#000000, .5)
+    }
 
     & > *:last-child {
         &, & > *:last-child {
