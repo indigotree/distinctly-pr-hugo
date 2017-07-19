@@ -6,5 +6,5 @@
 {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
 {{ .Hugo.Generator }}
 
-<link rel="manifest" href="manifest.json">
-<link rel="shortcut icon" href="dist/site-icon-32.png">
+<link rel="manifest" href="{{ "manifest.json" | absURL }}">
+<link rel="shortcut icon" href="{{ "dist/site-icon-32.png" | absURL }}">

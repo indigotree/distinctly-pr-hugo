@@ -4,8 +4,8 @@
         <div class="site-header__top">
             <a href="{{ .Site.BaseURL }}" class="site-header__brand">
                 <img
-                    src="dist/site-brand.png"
-                    srcset="dist/site-brand.png 1x, dist/site-brand-2x.png 2x"
+                    src="{{ "dist/site-brand.png" | absURL }}"
+                    srcset="{{ "dist/site-brand.png" | absURL }} 1x, {{ "dist/site-brand-2x.png" | absURL }} 2x"
                     alt="{{ .Site.Title }}"
                     width="250"
                     height="44"
