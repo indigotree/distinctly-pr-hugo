@@ -1,0 +1,24 @@
+<form class="form form--70" name="contact-form" netlify netlify-honeypot="bot" action="thank-you">
+    <div style="display: none;"><label>Don’t fill this out: <input name="bot" type="text"></label></div>
+    <div class="form__group">
+        <label class="form__label" for="name">Name *</label>
+        <input type="text" class="form__input form__input--text" name="name" id="name" placeholder="What is your name?" required="required">
+    </div>
+    <div class="form__group">
+        <label class="form__label" for="email">E-Mail Address *</label>
+        <input type="email" class="form__input form__input--email" name="email" id="email" placeholder="What is your e-mail address?" required="required">
+    </div>
+    <div class="form__group">
+        <label class="form__label" for="phone">Telephone</label>
+        <input type="tel" class="form__input form__input--tel" name="phone" id="phone" placeholder="What is your phone number?" required="required">
+    </div>
+    <div class="form__group">
+        <label class="form__label" for="comment">Comment</label>
+        <textarea class="form__input form__input--textarea" name="comment" id="comment"></textarea>
+    </div>
+    <div class="form__group">
+        <button type="submit" class="button button--primary">
+            Send Message
+        </button>
+    </div>
+</form>
