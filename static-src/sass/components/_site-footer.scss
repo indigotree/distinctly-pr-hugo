@@ -8,7 +8,7 @@
     &__bottom {
         font-size: 70%;
         p {
-            margin-bottom: 3px;
+            margin-bottom: 10px;
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -19,13 +19,7 @@
         margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 768px) {
-        &__logo {
-            text-align: left;
-            margin-bottom: 0;
-        }
-        &__copyright {
-            text-align: right;
-        }
+    a {
+        color: inherit;
     }
 }
