@@ -1,10 +1,12 @@
 {{ define "main" }}
 
-    <div class="site-content">
+    <div class="section">
+        <div class="container">
 
-        <h1>{{ .Site.Params.pageNotFound.Title | default "Page Not Found!" }}</h1>
-        <p>{{ .Site.Params.pageNotFound.Description | default "The page you requested could not be found." }}</p>
-
+            <h1>{{ .Site.Params.pageNotFound.Title | default "Page Not Found!" }}</h1>
+            <p>{{ .Site.Params.pageNotFound.Description | default "The page you requested could not be found." }}</p>
+            
+        </div>
     </div>
 
 {{ end }}
