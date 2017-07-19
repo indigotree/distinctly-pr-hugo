@@ -1,2 +1,5 @@
-<style>{{ readFile (delimit (slice "static/dist/" (index .Site.Data.manifest "critical.css")) "") | safeCSS }}</style>
-<link rel="stylesheet" href="dist/{{ index .Site.Data.manifest "app.css" | safeURL }}">
+<style>
+    {{/* Keeping these seperate to simplify future dev work */}}
+    {{- readFile (delimit (slice "static/dist/" (index .Site.Data.manifest "critical.css")) "") | safeCSS -}}
+    {{- readFile (delimit (slice "static/dist/" (index .Site.Data.manifest "app.css")) "") | safeCSS -}}
+</style>
