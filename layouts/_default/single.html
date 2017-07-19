@@ -1,11 +1,17 @@
 {{ define "main" }}
 
-    <article class="section">
-        <div class="container">
+    <article>
+    
+        {{ partial "page-header.html" (dict "Title" .Title) }}
 
-            {{ .Content }}
+        <div class="section">
+            <div class="container">
 
+                {{ .Content }}
+
+            </div>
         </div>
+
     </article>
 
 {{ end }}
