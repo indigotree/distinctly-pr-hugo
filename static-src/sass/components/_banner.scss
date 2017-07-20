@@ -2,7 +2,7 @@
     position: relative;
     
     &__overlay {
-        font-size: 14px;
+        font-size: 13px;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -15,7 +15,7 @@
         flex-direction: column;
         text-shadow: 1px 1px 20px rgba(#000000, .4);
         letter-spacing: 1px;
-        padding: 15px;
+        padding: 5px;
         text-align: center;
     }
 
@@ -26,12 +26,13 @@
 
     &__heading {
         color: inherit;
-        font-size: 175%;
+        font-size: 125%;
         margin-bottom: 10px;
     }
 
     &__description {
         margin-bottom: 0;
+        line-height: 1.2;
     }
 
     &__description, &__heading {
@@ -47,18 +48,29 @@
             font-size: 20px;
             font-weight: bold;
         }
+        &__description {
+            font-size: 75%;
+        }
     }
 
     @media screen and (min-width: 768px) {
         &__overlay {
-            font-size: 32px;
+            font-size: 26px;
         }
         &__heading {
             padding: 15px 20px;
             margin-bottom: 20px;
+            font-size: 140%;
         }
         &__description {
             padding: 10px 15px;
+            font-size: 100%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__overlay {
+            font-size: 32px;
         }
     }
     

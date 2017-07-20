@@ -2,8 +2,8 @@
 title: Home
 date: 2017-07-16T09:01:43.000Z
 draft: false
-hero_heading: 'Hero Text #2'
-hero_subheading: 'And this is something to accompany the Hero Text #2 text'
+hero_heading: 'Creative and Effective Digital PR'
+hero_subheading: 'Generating media coverage and audience engagement to deliver commercial advantage for our clients'
 ---
 
 Distinctly PR is an online media specialist, advising and delivering creative campaigns to businesses of all sizes to achieve an increase in website traffic, conversions and sales.
