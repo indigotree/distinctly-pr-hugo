@@ -11,16 +11,16 @@ const isProduction = process.env.NODE_ENV === 'production'
 // --
 
 gulp.task('dev', [], () => {
-    runSequence('clean', ['sass', 'scripts', 'fonts', 'images'])
+    runSequence('clean', ['sass', 'scripts', 'scripts:vendor', 'fonts', 'images'])
 
     gulp.watch(['static-src/sass/**/*.scss'], () => { runSequence('clean:sass', 'sass') })
-    gulp.watch(['static-src/scripts/**/*.js'], () => { runSequence('clean:scripts', 'scripts') })
+    gulp.watch(['static-src/scripts/**/*.js'], () => { runSequence('clean:scripts', 'scripts', 'scripts:vendor') })
     gulp.watch(['static-src/images/**/*'], ['images'])
     gulp.watch(['static-src/fonts/**/*'], ['fonts'])
 })
 
 gulp.task('production', [], () => {
-    runSequence('clean', ['sass', 'scripts', 'fonts', 'images'])
+    runSequence('clean', ['sass', 'scripts', 'scripts:vendor', 'fonts', 'images'])
 })
 
 // --
@@ -44,6 +44,18 @@ gulp.task('sass', () => {
     .pipe($.sass({ precision: 5 }))
     .pipe($.autoprefixer(['ie >= 11', 'last 2 versions']))
     .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
+    .pipe($.hash())
+    .pipe(gulp.dest('static/dist'))
+    .pipe($.hash.manifest('manifest.json', true))
+    .pipe(gulp.dest('data'))
+})
+
+gulp.task('scripts:vendor', () => {
+    return gulp.src([
+        'static-src/js/lory.min.js'
+    ])
+    .pipe($.concat('vendor.js'))
+    .pipe($.if(isProduction, $.uglify()))
     .pipe($.hash())
     .pipe(gulp.dest('static/dist'))
     .pipe($.hash.manifest('manifest.json', true))
