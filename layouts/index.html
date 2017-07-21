@@ -8,9 +8,10 @@
             </div>
         </div>
         <img
-            src="uploads/banner-1050.jpg"
-            srcset="uploads/banner-1750.jpg 1750w, uploads/banner-1050.jpg 1050w, uploads/banner-438.jpg 438w, uploads/banner-320.jpg 320w"
-            alt="Banner"
+            src="{{ .Params.hero_image_1750 | absURL }}"
+            srcset="{{ .Params.hero_image_1750 | absURL }} 1750w, {{ .Params.hero_image_1050 | absURL }} 1050w, {{ .Params.hero_image_320 | absURL }} 320w"
+            alt
+            role="presentation"
             class="banner__image"
         >
     </div>

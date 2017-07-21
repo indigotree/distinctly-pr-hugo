@@ -4,6 +4,9 @@ date: 2017-07-16T09:01:43.000Z
 draft: false
 hero_heading: 'Creative and Effective Digital PR'
 hero_subheading: 'Generating media coverage and audience engagement to deliver commercial advantage for our clients'
+hero_image_1750: '/uploads/banner-1750.jpg'
+hero_image_1050: '/uploads/banner-1050.jpg'
+hero_image_320: '/uploads/banner-320.jpg'
 ---
 
 Distinctly PR is an online media specialist, advising and delivering creative campaigns to businesses of all sizes to achieve an increase in website traffic, conversions and sales.

@@ -13,7 +13,9 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+      - { label: "Hero Image (width 1750px)", name: "hero_image_1750", widget: "image", required: false }
+      - { label: "Hero Image (width 1050px)", name: "hero_image_1050", widget: "image", required: false }
+      - { label: "Hero Image (width 320px)", name: "hero_image_320", widget: "image", required: false }
       - { label: "Hero Heading", name: "hero_heading", widget: "string", required: false }
       - { label: "Hero Subheading", name: "hero_subheading", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
