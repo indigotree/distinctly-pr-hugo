@@ -19,3 +19,5 @@ collections:
       - { label: "Hero Heading", name: "hero_heading", widget: "string", required: false }
       - { label: "Hero Subheading", name: "hero_subheading", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
+      - { label: "SEO Description", name: "description", widget: "string", required: false }
