@@ -3,4 +3,4 @@
   X-Xss-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000
-  Referrer-Policy: same-origin
+  Referrer-Policy: no-referrer
