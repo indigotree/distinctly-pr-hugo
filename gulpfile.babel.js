@@ -11,7 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // --
 
 gulp.task('dev', [], () => {
-    runSequence('clean', ['sass', 'scripts', 'scripts:vendor', 'fonts', 'images'])
+    runSequence('clean', ['sass', 'sass:cms', 'scripts', 'scripts:vendor', 'fonts', 'images'])
 
     gulp.watch(['static-src/sass/**/*.scss'], () => { runSequence('clean:sass', 'sass') })
     gulp.watch(['static-src/scripts/**/*.js'], () => { runSequence('clean:scripts', 'scripts', 'scripts:vendor') })
@@ -20,7 +20,7 @@ gulp.task('dev', [], () => {
 })
 
 gulp.task('production', [], () => {
-    runSequence('clean', ['sass', 'scripts', 'scripts:vendor', 'fonts', 'images'])
+    runSequence('clean', ['sass', 'sass:cms', 'scripts', 'scripts:vendor', 'fonts', 'images'])
 })
 
 // --
@@ -39,7 +39,7 @@ gulp.task('clean:scripts', () => {
 gulp.task('sass', () => {
     return gulp.src([
         'static-src/sass/app.scss',
-        'static-src/sass/critical.scss',
+        'static-src/sass/critical.scss'
     ])
     .pipe($.sass({ precision: 5 }))
     .pipe($.autoprefixer(['ie >= 11', 'last 2 versions']))
@@ -48,6 +48,16 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('static/dist'))
     .pipe($.hash.manifest('manifest.json', true))
     .pipe(gulp.dest('data'))
+})
+
+gulp.task('sass:cms', () => {
+    return gulp.src([
+        'static-src/sass/cms.scss'
+    ])
+    .pipe($.sass({ precision: 5 }))
+    .pipe($.autoprefixer(['ie >= 11', 'last 2 versions']))
+    .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
+    .pipe(gulp.dest('static/admin'))
 })
 
 gulp.task('scripts:vendor', () => {
