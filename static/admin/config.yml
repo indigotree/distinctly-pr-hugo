@@ -5,6 +5,7 @@ backend:
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
+  
   - name: 'page'
     label: "Page"
     folder: "content"
@@ -21,3 +22,16 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
       - { label: "SEO Description", name: "description", widget: "string", required: false }
+
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Contact Information"
+        file: "data/contact.yml"
+        description: "Settings"
+        fields:
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Email Address", name: "email", widget: "string"}
