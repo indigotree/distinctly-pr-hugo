@@ -5,7 +5,7 @@
         {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
 
         <title>{{ block "title" . }}
-            {{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}
+            {{- with .Title }}{{ . }} - {{ end }}{{ .Site.Title -}}
         {{ end }}</title>
 
         {{ if .RSSLink }}

@@ -57,7 +57,7 @@ var PagePreview = createClass({
             siteFooterPart,
             h('div', {'className': 'search-index'}, 
                 h('p', {'className': 'search-index__title'},
-                    (entry.getIn(['data', 'seo_title']) ? entry.getIn(['data', 'seo_title']) : entry.getIn(['data', 'title'])) + ' | Distinctly PR'
+                    (entry.getIn(['data', 'seo_title']) ? entry.getIn(['data', 'seo_title']) : entry.getIn(['data', 'title']) + ' - Distinctly PR')
                 ),
                 h('p', {'className': 'search-index__description'},
                     entry.getIn(['data', 'description']) ? entry.getIn(['data', 'description']) : '...'
