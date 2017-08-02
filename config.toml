@@ -2,5 +2,7 @@ baseURL = "/"
 languageCode = "en-GB"
 title = "Distinctly PR"
 
+enableRobotsTXT = true
+
 [params]
     copyright = "&copy; Copyright [year] Distinctly Digital Limited. Registered Company No. 06905971"
