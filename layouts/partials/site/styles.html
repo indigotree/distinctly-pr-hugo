@@ -1,5 +1,5 @@
-<style>
-    {{/* Keeping these seperate to simplify future dev work */}}
-    {{- readFile (delimit (slice "static/dist/" (index .Site.Data.manifest "critical.css")) "") | safeCSS -}}
-    {{- readFile (delimit (slice "static/dist/" (index .Site.Data.manifest "app.css")) "") | safeCSS -}}
-</style>
+{{ $s1 := resources.Get "sass/critical.scss" | toCSS | postCSS (dict "config" "postcss.config.js") | minify }}
+{{ $s2 := resources.Get "sass/app.scss" | toCSS | postCSS (dict "config" "postcss.config.js") | minify }}
+
+<link rel="stylesheet" href="{{ $s1.Permalink }}" />
+<link rel="stylesheet" href="{{ $s2.Permalink }}" />

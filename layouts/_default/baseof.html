@@ -10,10 +10,10 @@
         
         <link rel="canonical" href="{{ .Permalink | absURL }}">
 
-        {{ if .RSSLink }}
-            <link href="{{ .RSSLink }}" title="{{ .Site.Title }}" type="application/rss+xml" rel="alternate">
-            <link href="{{ .RSSLink }}" title="{{ .Site.Title }}" type="application/rss+xml" rel="feed">
-        {{ end }}
+         {{ with .OutputFormats.Get "RSS" }}
+            <link href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" type="application/rss+xml" rel="alternate">
+            <link href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" type="application/rss+xml" rel="feed">
+         {{ end }}
 
         {{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
 

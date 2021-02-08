@@ -20,6 +20,6 @@ All our team are passionate about digital and the importance of delivering succe
 
 Are you shouting but nobody’s listening? Do you want your business noticed?
 
-{{% button "mailto:info@distinctlypr.co" %}}Get in touch today{{% /button %}}
+{{< button "mailto:info@distinctlypr.co" >}}Get in touch today{{< /button >}}
 
 

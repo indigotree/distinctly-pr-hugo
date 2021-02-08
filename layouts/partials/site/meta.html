@@ -5,7 +5,7 @@
 
 {{ with .Params.Seo_title }}<meta name="title" content="{{ . }}">{{ end }}
 {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 
 <link rel="manifest" href="{{ "manifest.json" | absURL }}">
-<link rel="shortcut icon" href="{{ "dist/site-icon-32.png" | absURL }}">
+<link rel="shortcut icon" href="{{ "images/site-icon-32.png" | absURL }}">

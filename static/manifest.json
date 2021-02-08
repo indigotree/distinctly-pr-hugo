@@ -8,23 +8,13 @@
   "theme_color": "#00aab0",
   "icons": [
     {
-      "src": "dist/site-icon-32.png",
+      "src": "images/site-icon-32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "dist/site-icon-96.png",
+      "src": "images/site-icon-96.png",
       "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "dist/site-icon-128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "dist/site-icon-256.png",
-      "sizes": "256x256",
       "type": "image/png"
     }
   ]

@@ -2,4 +2,7 @@
 /npm-debug.log
 
 /data/manifest.json
-/static/dist
+
+/resources
+
+.DS_Store

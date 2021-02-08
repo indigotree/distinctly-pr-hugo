@@ -1,2 +1,6 @@
-<script src="dist/{{ index .Site.Data.manifest "vendor.js" | safeURL }}"></script>
-<script src="dist/{{ index .Site.Data.manifest "app.js" | safeURL }}"></script>
+{{ $s1 := resources.Get "js/lory.min.js" }}
+{{ $s2 := resources.Get "js/app.js" }}
+
+{{ $s := slice $s1 $s2 | resources.Concat "js/bundle.js" | minify }}
+
+<script src="{{ $s.Permalink }}"></script>
